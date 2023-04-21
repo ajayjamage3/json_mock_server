@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.0",
+    "lowdb": "^6.0.0"
   }
 }

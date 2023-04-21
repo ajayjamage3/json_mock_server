@@ -6,6 +6,12 @@ const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
+import { LowSync } from 'lowdb'
+import { JSONFileSync } from 'lowdb/node'
+
+const db = new LowSync(new JSONFileSync('file.json'), {})
+db.read()
+db.write()
 
 server.use(middlewares)
 // Add this before server.use(router)
