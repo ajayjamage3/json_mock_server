@@ -9,7 +9,7 @@ const middlewares = jsonServer.defaults()
 import { LowSync } from 'lowdb'
 import { JSONFileSync } from 'lowdb/node'
 
-const db = new LowSync(new JSONFileSync('file.json'), {})
+const db = new LowSync(new JSONFileSync('db.json'), {})
 db.read()
 db.write()
 
